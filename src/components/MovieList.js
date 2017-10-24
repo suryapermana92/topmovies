@@ -15,10 +15,11 @@ class MovieList extends Component {
         }
       renderList() {
           if(this.state.database.length > 0) {
-              return this.state.database.map(movies => {
+              return this.state.database.map(movies, index => {
                   return (
                       <MovieDetail  
                         movies={movies}
+                        index={index}
                         key={movies.id} 
                       />
                   )
